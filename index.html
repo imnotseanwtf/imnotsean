@@ -109,22 +109,24 @@
   }
 
   .service {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
+    min-height: 70vh;
+    padding: 40px 0;
   }
 
   .card {
     height: 500px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .imgcard {
@@ -149,6 +151,15 @@
     height: 70px;
     margin: 10px;
     object-fit: contain;
+  }
+
+  .project-item {
+    padding: 20px 0;
+  }
+
+  .project-item h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {
@@ -177,6 +188,16 @@
       height: auto;
       width: 100%;
     }
+
+    .project-item .d-flex {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+
+    .project-item .d-flex img {
+      margin-bottom: 15px;
+      margin-right: 0 !important;
+    }
   }
 </style>
 
@@ -191,7 +212,7 @@
             I am Sean <br />
             Gulliver Doctora
           </div>
-          <p class="inter">a Full Stack Web Developer</p>
+          <p class="inter">a Full Stack Developer</p>
           <form action="https://imnotseanwtf.github.io/imnotsean/Sean-Gulliver-Doctora.pdf" method="get">
             <button class="button-89 mt-2" type="submit">Get CV</button>
           </form>
@@ -214,14 +235,14 @@
         </div>
         <p class="inter-small mt-5">
           My name is Sean Gulliver Doctora. I am 20 years old and <br />
-          Fullstack Web Developer, currently working as a Junior <br /> Web Developer.
+          a Full Stack Developer.
         </p>
         <p class="inter-small mt-4">
           I utilize hot, production-ready tools and possess extensive <br />
           experience in building robust, beautiful, and fully-functioning
           <br />
-          web applications that adhere to industry standards and <br />
-          best practices.
+          web and mobile applications that adhere to <br />
+          industry standards, best practices, and modern development trends.
         </p>
         <form action="https://imnotseanwtf.github.io/imnotsean/Sean-Gulliver-Doctora.pdf" method="get">
           <button class="button-89 mt-2" type="submit">Download CV</button>
@@ -232,15 +253,34 @@
   <div class="text-center" style="margin-top: 200px">
     <div class="roboto-mono-small">SERVICES OFFERS</div>
     <div class="container service">
-      <div class="card">
-        <img src="pics/download.png" alt="" class="imgcard img-fluid" />
-        <h4>Web Development</h4>
-        <p class="m-3 inter-small">
-          I Build and Publish <br />
-          production-ready Web <br />
-          Application with Laravel <br />
-          and MySQL and Bootstrap
-        </p>
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div class="card">
+            <img src="pics/download.png" alt="" class="imgcard img-fluid" />
+            <h4>Full Stack Development</h4>
+            <p class="m-3 inter-small">
+              I Build and Publish <br />
+              production-ready Full Stack <br />
+              Application with Laravel, <br />
+              Filament, HTML5, CSS3, <br />
+              JavaScript, jQuery, Bootstrap, <br />
+              MySQL, PostgreSQL, <br />
+              RESTful APIs, WebSockets, <br />
+              Docker, and AWS
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div class="card">
+            <img src="https://img.icons8.com/color/100/flutter.png" alt="" class="imgcard img-fluid" />
+            <h4>Mobile Development</h4>
+            <p class="m-3 inter-small">
+              I Build and Publish <br />
+              production-ready Mobile <br />
+              Application with Flutter
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -249,127 +289,97 @@
     <div class="roboto-mono-small">SKILLS</div>
   </div>
   <div class="container mt-5">
-    <h4>WEB</h4>
-    <div class="logo-container">
-      <img src="pics/download.png" alt="Web logo" class="logo" />
-      <img src="pics/icons8-html-logo-100.png" alt="HTML logo" class="logo" />
+    <h4 class="mb-3" style="text-align: left;">FRONTEND</h4>
+    <div class="logo-container mb-3">
+      <img src="pics/icons8-html-logo-100.png" alt="HTML5 logo" class="logo" />
       <img src="pics/icons8-css3-100.png" alt="CSS3 logo" class="logo" />
       <img src="pics/icons8-javascript-100.png" alt="JavaScript logo" class="logo" />
       <img src="pics/icons8-jquery-100.png" alt="jQuery logo" class="logo" />
       <img src="pics/icons8-bootstrap-100.png" alt="Bootstrap logo" class="logo" />
+      <img src="pics/Filament Laravel.png" alt="Filament logo" class="logo" style="width: 120px; height: 80px;" />
+    </div>
+    <h4 class="mt-4 mb-3" style="text-align: left;">BACKEND</h4>
+    <div class="logo-container mb-3">
       <img src="pics/icons8-php-logo-100.png" alt="PHP logo" class="logo" />
       <img src="pics/icons8-node-js-96.png" alt="Node.js logo" class="logo" />
+      <img src="https://img.icons8.com/fluency/100/laravel.png" alt="Laravel logo" class="logo" />
     </div>
-    <h4 class="mt-2">DATABASE</h4>
-    <div class="logo-container">
+    <h4 class="mt-4 mb-3" style="text-align: left;">DATABASE</h4>
+    <div class="logo-container mb-3">
       <img src="pics/icons8-mysql-logo-100.png" alt="MySQL logo" class="logo" />
+      <img src="https://img.icons8.com/color/100/postgreesql.png" alt="PostgreSQL logo" class="logo" />
     </div>
-    <h4 class="mt-2">DEPLOYMENT AND SOURCE CONTROL</h4>
-    <div class="logo-container">
+    <h4 class="mt-4 mb-3" style="text-align: left;">DEVOPS</h4>
+    <div class="logo-container mb-3">
+      <img src="https://img.icons8.com/color/100/amazon-web-services.png" alt="AWS logo" class="logo" />
+      <img src="https://img.icons8.com/color/100/docker.png" alt="Docker logo" class="logo" />
+    </div>
+    <h4 class="mt-4 mb-3" style="text-align: left;">MOBILE</h4>
+    <div class="logo-container mb-3">
+      <img src="https://img.icons8.com/color/100/flutter.png" alt="Flutter logo" class="logo" />
+    </div>
+    <h4 class="mt-4 mb-3" style="text-align: left;">VERSION CONTROL</h4>
+    <div class="logo-container mb-3">
       <img src="pics/icons8-git-100.png" alt="Git logo" class="logo" />
       <img src="pics/icons8-github-100.png" alt="GitHub logo" class="logo" />
     </div>
   </div>
 
   <div class="text-center" style="margin-top: 150px">
-    <div class="roboto-mono-small">PREVIOUS EXPERIENCE / PROJECT</div>
+    <div class="roboto-mono-small">PROFESSIONAL EXPERIENCE / PROJECT</div>
   </div>
 
   <div class="container mt-5" style="margin-bottom: 20vh">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-      <div class="col mb-4">
-        <div class="card">
-          <img src="pics/LoGo1.svg" alt="" class="imgcard img-fluid" />
-          <a href="https://github.com/lieking029/Artech" style="text-decoration: none">
-            <h4>Artech</h4>
-          </a>
-          <p class="m-3 inter-small">
-            Developing a cutting-edge text-to-image generator powered by
-            OpenAI's API, seamlessly integrated with GCash via Adyen.
-          </p>
+    <div class="row">
+      <div class="col-12">
+        <div style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 30px;">
+          <div class="text-center mb-4">
+            <img src="pics/epickmeup-logo-landscape-yellow.png" alt="EpickMeUp logo"
+              style="height: 80px; width: auto; object-fit: contain" class="img-fluid" />
+            <p class="inter-small mt-2 mb-0">
+              <strong>Period:</strong> Apr. 2025 - Nov 2025
+            </p>
+          </div>
 
-          <p class="m-3 inter-small">(Freelance Project)</p>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card">
-          <img src="pics/sangpum-logo-removebg-preview.png" alt=""
-            style="height: 100px; width: 200px; margin-bottom: 50px" class="img-fluid" />
-          <a href="https://github.com/lieking029/sangpum" style="text-decoration: none">
-            <h4>Sangpum</h4>
-          </a>
-          <p class="m-3 inter-small">
-            An innovative eCommerce platform designed with robust multi-role
-            functionality, enabling seamless order tracking throughout the
-            entire process.
-          </p>
-          <p class="m-3 inter-small">(Freelance Project)</p>
-        </div>
-      </div>
-      <div class="col mb-4">
-        <div class="card">
-          <img src="pics/352919655_784272986735300_366124630578652534_n.jpg" alt="" class="imgcard img-fluid m-2" />
-          <a href="https://github.com/imnotseanwtf/7Jshop" style="text-decoration: none">
-            <h4>7J Sign</h4>
-          </a>
-          <p class="m-3 inter-small">
-            Creating an advanced inventory management system with automated
-            item deletion checks using cron jobs for items older than one
-            month. Integrating Chatify API to facilitate direct messaging
-            between users.
-          </p>
+          <div class="mb-4 pb-4" style="border-bottom: 1px solid #e0e0e0">
+            <h4 class="mb-3"><b>ePickmeUp: On-Demand Delivery Web</b></h4>
+            <p class="inter-small mb-2">
+              <strong>Tech Stack:</strong> Docker, Filament, Laravel, Tailwind, Livewire, HTML5, CSS3
+            </p>
+            <p class="inter-small mb-0">
+              An on-demand delivery web application for people who need items delivered.
+            </p>
+          </div>
 
-          <p class="m-3 inter-small">(Freelance Project)</p>
-        </div>
-      </div>
+          <div class="mb-4 pb-4" style="border-bottom: 1px solid #e0e0e0">
+            <h4 class="mb-3"><b>ePickmeUp: Ride-Hailing Web</b></h4>
+            <p class="inter-small mb-2">
+              <strong>Tech Stack:</strong> Docker, Laravel, Bootstrap, HTML5, CSS3
+            </p>
+            <p class="inter-small mb-0">
+              A ride-hailing web application for people who need a ride.
+            </p>
+          </div>
 
-      <div class="col mb-4">
-        <div class="card">
-          <!-- <img
-              src="pics/352919655_784272986735300_366124630578652534_n.jpg"
-              alt=""
-              class="imgcard img-fluid m-2"
-            /> -->
-          <a href="https://github.com/imnotseanwtf/lilypad" style="text-decoration: none">
-            <h4>Lilypad</h4>
-          </a>
-          <p class="m-3 inter-small">
-            Architected and implemented RESTful API infrastructure, designed
-            scalable database schema for inventory management.
-          </p>
+          <div class="mb-4 pb-4" style="border-bottom: 1px solid #e0e0e0">
+            <h4 class="mb-3"><b>ePickmeUp: Ride-Hailing Driver App</b></h4>
+            <p class="inter-small mb-2">
+              <strong>Tech Stack:</strong> Flutter
+            </p>
+            <p class="inter-small mb-0">
+              A mobile application for drivers to manage ride requests and deliveries.
+            </p>
+          </div>
 
-          <p class="m-3 inter-small">(Freelance Project)</p>
-        </div>
-      </div>
-
-      <div class="col mb-4">
-        <div class="card">
-          <img src="pics/bmis.png" alt="" class="imgcard img-fluid m-2" />
-          <a href="https://github.com/imnotseanwtf/bmis" style="text-decoration: none">
-            <h4>Kay-Anlog BMIS</h4>
-          </a>
-          <p class="m-3 inter-small">
-            Automated DOMPDF document generation, integrated Mailtrap alerts,
-            developed analytics dashboard, and deployed on Hostinger hosting.
-          </p>
-
-          <p class="m-3 inter-small">(Freelance Project)</p>
-        </div>
-      </div>
-
-      <div class="col mb-4">
-        <div class="card">
-          <img src="pics/logo-ym.gif" alt="" class="imgcard img-fluid m-2" />
-          <a href="https://github.com/imnotseanwtf/lyorp-ims" style="text-decoration: none">
-            <h4>CYDO System</h4>
-          </a>
-          <p class="m-3 inter-small">
-            Implemented Twilio SMS announcements, automated task scheduling,
-            integrated DOMPDF certificate generation, and deployed on
-            Hostinger VPS.
-          </p>
-
-          <p class="m-3 inter-small">(Freelance Project)</p>
+          <div class="mb-0">
+            <h4 class="mb-3"><b>ePickmeUp: Information Management System</b></h4>
+            <p class="inter-small mb-2">
+              <strong>Tech Stack:</strong> Docker, Filament, Laravel
+            </p>
+            <p class="inter-small mb-0">
+              An information management system for managing applications and data.
+            </p>
+          </div>
         </div>
       </div>
     </div>
